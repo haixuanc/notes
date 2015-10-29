@@ -1,4 +1,3 @@
-
 ## The interface hierarchy
 
 - Collection
@@ -237,3 +236,28 @@ public class EmpSort {
 > Singed integer type is not big enough to represent the difference of two arbitrary signed integers. If i is a large positive integer and j is a large negative integer, i - j will overflow and will return a negative number.
 
 ---
+
+## SortedSet
+
+```java
+public interface SortedSet<E> extends Set<E> {
+	// Range-view
+	SortedSet<E> subSet(E fromElement, E toElement);
+	SortedSet<E> headSet(E toElement);
+	SortedSet<E> tailSet(E fromElement);
+
+	// Endpoints
+	E first();
+	E last();
+
+	// Comparator access
+	Comparator<? super E> comparator();
+}
+```
+
+Constructors:
+
+- `SortedSet()` // sort elements in natual order
+- `SortedSet(Comparator<? super E> comparator)` // sort elements using the comparator provided
+
+Changes to the range-view write back to the backing sorted set and vice versa. Thus, it's okay to use range-view on sorted sets for long periods of time, unlike range-views on lists.

@@ -261,3 +261,20 @@ Constructors:
 - `SortedSet(Comparator<? super E> comparator)` // sort elements using the comparator provided
 
 Changes to the range-view write back to the backing sorted set and vice versa. Thus, it's okay to use range-view on sorted sets for long periods of time, unlike range-views on lists.
+
+---
+
+## SortedMap
+
+```java
+public interface SortedMap<K, V> extends Map<K, V> {
+	Comparator<? super K> comparator();
+	SortedMap<K, V> subMap(K fromKey, K toKey);
+	SortedMap<K, V> headMap(K toKey);
+	SortedMap<K, V> tailMap(K fromKey);
+	K firstKey();
+	K lastKey();
+}
+```
+
+Similar behavior as `SortedSet`.

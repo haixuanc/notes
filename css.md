@@ -6,23 +6,27 @@
 - when an element is floated it is taken out of the normal flow of the document. It is shifted to the left or right until it touches the edge of its **containing box** or another **floated element**.
 - As float implies the use of the block layout, it modifies the computed value of the display value to `block`.
 
-<h2>Examples</h2>
-<div>
-<p class="rside">This is some text. This is some text. This is some text.
-    This is some text. This is some text. This is some text.</p>
-<p class="lside">This is some text. This is some text. This is some text.
-    This is some text. This is some text. This is some text.</p>
-<p> This is some text. This is some text. This is some text.
-    This is some text. This is some text. This is some text.
-    This is some text. This is some text. This is some text.
-    This is some text. This is some text. This is some text.
-    This is some text. This is some text. This is some text.
-    This is some text. This is some text. This is some text.
-    This is some text. This is some text. This is some text.</p>
-</div>
+#### Fixing margin collapsing for the floats' container
 
-<h2>Styles Used</h2>
+Solution 1: Clear the floats for the last element in the floats' container.
 
+```css
+#container:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+```
+
+Solution 2: Set the `overflow` property for the floats' container.
+
+```css
+#container {
+	overflow: auto | hidden;
+}
+```
+
+**[JSFiddle demo](http://jsfiddle.net/haixuanc/r2usqqwp/4/)**
 
 ### Clear
 

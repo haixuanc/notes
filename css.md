@@ -48,7 +48,7 @@ Solution 3: Use inline-block instead of float
 
 ## 3. Display
 
-**[Tutorial on CSS Layout, Responsive Design, Media Queries, inline-block, column, flexbox](http://learnlayout.com/margin-auto.html)**
+**[Tutorial on CSS Layout, Responsive Design, Media Queries, inline-block, column, flexbox](http://learnlayout.com)**
 
 ### `box-sizing`
 

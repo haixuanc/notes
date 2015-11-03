@@ -33,3 +33,9 @@ Solution 2: Set the `overflow` property for the floats' container.
 - The `clear` CSS property specifies whether an element can be next to `floating` elements that precede it or must be moved down (**cleared**) below them.
 - The `clear` property applies to both floating and non-floating elements.
 - When applied to non-floating blocks, it moves the border edge of the element down until it is below the margin edge of all relevent floats. This movement (when it happens) causes **margin collapsing** not to occur.
+
+## 2. Inline vs block elements
+
+**Block:** Takes up the full width available, with a new line before and after (`display:block;`)
+
+**Inline:** Takes up only as much width as it needs, and does not force new lines (`display:inline;`)

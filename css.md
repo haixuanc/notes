@@ -39,3 +39,7 @@ Solution 2: Set the `overflow` property for the floats' container.
 **Block:** Takes up the full width available, with a new line before and after (`display:block;`)
 
 **Inline:** Takes up only as much width as it needs, and does not force new lines (`display:inline;`)
+
+## 3. Display
+
+**[Tutorial on CSS Layout](http://learnlayout.com/margin-auto.html)**

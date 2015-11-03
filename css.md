@@ -26,6 +26,12 @@ Solution 2: Set the `overflow` property for the floats' container.
 }
 ```
 
+Solution 3: Use inline-block instead of float
+
+- Inline-block behaves the same as inline elements. It will be added to the same line and pushed to the next line when it wraps.
+- But unline inline element, you can set `width` and `height` for it just like `block` elements.
+- When using set `display` property to `inline-block`, you will probably want to set `vertical-align` to `top` so all `inline-block` elements can align properly.
+
 **[JSFiddle demo](http://jsfiddle.net/haixuanc/r2usqqwp/4/)**
 
 ### Clear
@@ -42,4 +48,30 @@ Solution 2: Set the `overflow` property for the floats' container.
 
 ## 3. Display
 
-**[Tutorial on CSS Layout](http://learnlayout.com/margin-auto.html)**
+**[Tutorial on CSS Layout, Responsive Design, Media Queries, inline-block, column, flexbox](http://learnlayout.com/margin-auto.html)**
+
+### `box-sizing`
+
+Set `box-sizing` to `border-box` will prevent `padding` and `border` from increasing the size of an element. That is, the element overall width is only determined by the `width` property.
+
+### Media queries
+
+An example:
+
+```css
+@media screen and (min-width:600px) {
+  nav {
+    float: left;
+    width: 25%;
+  }
+  section {
+    margin-left: 25%;
+  }
+}
+
+@media screen and (max-width:599px) {
+  nav li {
+    display: inline;
+  }
+}
+```

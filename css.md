@@ -84,6 +84,22 @@ An example:
 - If the stylesheet has conflicting rules and they are equally specific, then CSS gives priority to the rule that is later in the stylesheet.
 - When you have a problem with conflicting rules, try to resolve it by making one of the rules more specific, so that it has priority. If you cannot do that, try moving one of the rules nearer the end of the stylesheet so that it has priority.
 
+### Pseudo-class selectors
+
+```css
+selector:pseudo-class {
+	property: value;
+}
+```
+
+### Attribute selectors
+
+```css
+selector[attribute=value] {
+	property: value;
+}
+```
+
 ### Selectors based on relationships
 
 | Selector | Selects |

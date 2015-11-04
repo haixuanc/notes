@@ -75,3 +75,21 @@ An example:
   }
 }
 ```
+
+## 4. Selectors
+
+### Rule specificity and cascading
+
+- If more than one rule applies to an element and specifies the same property, then CSS gives priority to the rule that has the more specific selector. An ID selector is more specific than a class selector, which in turn is more specific than a tag selector.
+- If the stylesheet has conflicting rules and they are equally specific, then CSS gives priority to the rule that is later in the stylesheet.
+- When you have a problem with conflicting rules, try to resolve it by making one of the rules more specific, so that it has priority. If you cannot do that, try moving one of the rules nearer the end of the stylesheet so that it has priority.
+
+### Selectors based on relationships
+
+| Selector | Selects |
+|----------|---------|
+| A E	        | Any E element that is a descendant of an A element (that is: a child, or a child of a child, etc.) |
+| A > E	        | Any E element that is a child (i.e. direct descendant) of an A element |
+| E:first-child	| Any E element that is the first child of its parent |
+| B + E	        | Any E element that is the next sibling of a B element (that is: the next child of the same parent) |
+

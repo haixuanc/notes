@@ -6,11 +6,11 @@ protocol://host:port
 
 Exempt from SOP:
 
-- JavaScript files: e.g. `<script>`
+- `<script>`
 
 ## 1. JSONP
 
-- *JSON is not valid JavaScript.* This is because JavaScript interpreters parse the opening curly brace as the beginning of a block statement, and expect it to be followed by one or more valid JavaScript statements.
+*JSON is not valid JavaScript.* This is because JavaScript interpreters parse the opening curly brace as the beginning of a block statement, and expect it to be followed by one or more valid JavaScript statements.
 
 ### Solution 1. Global variables
 
@@ -42,6 +42,9 @@ document.body.appendChild(script);
 
 ### Limitations and security concerns
 
+- `<script>` only supports `GET` requests. You won't be able to use other HTTP verbs like `POST`, `DELETE` to create a standard REST APIs.
+- JSONP will always return **200** status code when the `<script>` is loaded. If the injected script has errors, nothing happens.
+- `<script>` permits any malicious script content to be loaded and executed on the requesting page. It opens a door to *cross-site request forgery (CSRF)* attacks.
 
 ## 2. Subdomain proxies
 

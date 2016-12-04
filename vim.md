@@ -1,0 +1,4 @@
+## Plugins
+
+- NERDTree
+- Ctrl-P
